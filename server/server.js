@@ -1,5 +1,6 @@
 require("dotenv").config();
 const express = require("express");
+const client = require("./elasticsearch/client");
 
 const app = express();
 
