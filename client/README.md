@@ -1,16 +1,30 @@
-# React + Vite
+# Earthquake Watch - Frontend
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is the React-based frontend for the Earthquake Watch Service, built with Vite.
 
-Currently, two official plugins are available:
+## Features
+- **Dynamic Filtering**: Selection menus for earthquake types, magnitude levels, and date ranges.
+- **Location Input**: Text search for specific geographical regions.
+- **Real-time Results**: Instant feedback using Axios to communicate with the backend.
+- **Componentized Architecture**: Cleanly separated components for the Navigation Bar, Filter Form, and Search Results.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Installation & Setup
 
-## React Compiler
+1. Install dependencies:
+   ```bash
+   npm install
+   ```
+2. Create a `.env` file with the backend API URL:
+   ```env
+   VITE_API_URL=http://localhost:3001
+   ```
+3. Run the development server:
+   ```bash
+   npm run dev
+   ```
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Key Components
+- `App.jsx`: Main container and API orchestrator.
+- `FilterForm.jsx`: Handles user input and search criteria.
+- `SearchResults.jsx`: Displays earthquake data cards.
+- `NavBar.jsx`: Site navigation.
