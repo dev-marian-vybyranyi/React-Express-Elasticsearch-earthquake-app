@@ -11,7 +11,7 @@ const App = () => {
   const sendSearchRequest = (searchParams) => {
     const results = {
       method: "GET",
-      url: "http://localhost:3001/results",
+      url: `${import.meta.env.VITE_API_URL}/results`,
       params: searchParams,
     };
     axios
